@@ -1,4 +1,5 @@
 using System;
+using UnityEditor.IMGUI.Controls;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -46,6 +47,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+
+        if (moveSpeed > walkSpeed)
+        {
+            Debug.Log("lari sedang dijalankan");
+        }else Debug.Log("lari tidak dijalankan");
         GroundCheck();  
         Movement();
         Jump();
